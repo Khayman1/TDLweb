@@ -8,40 +8,54 @@ body {
 
 /* To-Do List 컨테이너 스타일 */
 #todo-container {
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
+  margin-top: 40px;
   background: white;
-  padding: 20px;
+  padding: 50px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1px #c5d6f7;
 }
 
-h2 {
+h1 {
   text-align: center;
   color: #333;
+  margin-bottom: 50px;
 }
 
 /* 할 일 추가 폼 스타일 */
 form.add-todo {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
-input[type="text"] {
+.title, .body {
   flex: 1;
-  margin-right: 5px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  margin: 0 8px 5px ;
+  padding: 15px 10px 20px;
+  border: 1px solid #c5d6f7; 
+  border-radius: 10px; 
+  box-sizing: border-box; 
+  box-shadow: 0 2px 3px #90B1DB; 
+  transition: border-color 0.3s; 
+  background-color: #fafafa; 
 }
 
-button.add-button {
-  padding: 10px 20px;
+.title:focus, .body:focus {
+  border-color:  #90B1DB; /* 입력 필드에 포커스 될 때 테두리 색상 변경 */
+}
+
+.add-button {
+  font-size: 18px;
+  padding: 12px;
+  margin-left: 10px;
   background-color: #90B1DB;
-  color: white;
+  color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 15px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+
 }
 
 button.add-button:hover {
@@ -52,34 +66,38 @@ button.add-button:hover {
 table {
   width: 100%;
   table-layout: fixed;
+  display: flex;
+  justify-content: center;
+  
+  
 }
 
-td.task {
+.task {
   padding: 10px;
   border-bottom: 1px solid #ddd;
   display: flex;
   align-items: center;
 }
 
-input[type="checkbox"] {
-  margin-right: 10px;
+.checkbox {
+  margin: 15px;
 }
 
-input.task-title, input.task-body {
+.task-title, .task-body {
   flex: 1;
   margin-right: 5px;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 1px solid  #c5d6f7;
+  border-radius: 10px;
 }
 
-input[type="submit"].task-edit, input[type="submit"].task-delete {
+.task-edit, .task-delete {
   border: none;
   background-color: transparent;
   cursor: pointer;
   padding: 5px 10px;
 }
 
-input[type="submit"].task-edit:hover, input[type="submit"].task-delete:hover {
-  opacity: 0.7;
+.task-edit:hover, .task-delete:hover {
+  opacity: 0.5;
 }
